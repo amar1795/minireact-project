@@ -12,8 +12,8 @@ export default function TextForm(props) {
     const handleLoClick =()=>
         {
 
-            let newText=text.toLowerCase();
-            setText(newText);
+            
+            setText(text.toLowerCase());
         
         }
 
@@ -23,9 +23,10 @@ export default function TextForm(props) {
     }
 
     const [text, setText] = useState("Enter the text here");
+    //use state is a Hook which changes the state of "text"
     return (
-        <>
-        <div>
+    
+        <div> <div>
         <div className="mb-3">
 
         <h1>{props.heading}</h1>
@@ -42,7 +43,7 @@ export default function TextForm(props) {
             <h2>preview</h2>
             <p>{text}</p>
         </div>
-        </>
+        </div>
 
   )
 }
