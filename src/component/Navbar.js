@@ -1,10 +1,45 @@
-import React from "react";
-export default function  navbar(props){
+import React,{useState} from "react";
+
+
+
+export default function  Navbar(props){
+  const [BtnText, setBtnText] = useState("fa-solid fa-moon fa-2xl");
+
+  const [MyStyle, setMyStyle] = useState(
+    "white"
+   
+  );
+  
+  const toggleClick=()=>{
+    if (MyStyle==="white") {
+  
+        setMyStyle(
+            "dark",
+  
+        )
+        document.body.style.backgroundColor="black";
+        document.body.style.color="white";
+        setBtnText("fa-regular fa-moon fa-2xl")
+        
+    }
+    else
+    {
+        setMyStyle(
+            "white"
+        )
+        document.body.style.backgroundColor="white";
+        document.body.style.color="black";
+        setBtnText("fa-solid fa-moon fa-2xl")
+
+       
+    }
+  
+  }
 
     return (
         <div >
 
-<nav className="navbar navbar-expand-lg bg-body-tertiary">
+<nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme={MyStyle}>
 <div className="container-fluid">
   <a className="navbar-brand" href="/">{props.title}</a>
   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +70,9 @@ export default function  navbar(props){
     </ul>
     <form className="d-flex" role="search">
       <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button className="btn btn-outline-success" type="submit">Search</button>
+      <button className="btn btn-outline-success mx-4" type="submit">Search</button>
+      <i className={BtnText} onClick={toggleClick} style={{cursor:"pointer",marginTop:"18px"}} ></i>
+
     </form>
   </div>
 </div>
