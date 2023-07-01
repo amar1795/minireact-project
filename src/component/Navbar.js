@@ -2,7 +2,7 @@ import React from "react";
 export default function  navbar(props){
 
     return (
-        <div>
+        <div >
 
 <nav className="navbar navbar-expand-lg bg-body-tertiary">
 <div className="container-fluid">
@@ -13,7 +13,7 @@ export default function  navbar(props){
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="/">{props.about}</a>
+        <a className="nav-link active" aria-current="page" href="/about">{props.about}</a>
       </li>
       <li className="nav-item">
         <a className="nav-link" href="/">Link</a>

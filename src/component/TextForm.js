@@ -64,7 +64,7 @@ export default function TextForm(props) {
     //use state is a Hook which changes the state of ""
     return (
     
-        <div> 
+        <div className='container'> 
         <div>
         <div className="mb-3">
 
